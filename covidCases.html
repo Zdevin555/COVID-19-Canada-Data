@@ -1,0 +1,72 @@
+<!-- 
+ static html structure of Covid-19 cases statistics
+ AUTHOR: Diwen Zhang
+ EMAIL:  zhangdiw@sheridancollege.ca
+ CREATED: 2021-06-30
+ UPDATED: 2021-07-2 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Canada</title>
+    <link rel="stylesheet" href="css/covidCases.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="http://www.songho.ca/js/Logger.js"></script>
+    <script src="js/covidCases.js"></script>
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <h1>COVID-19 Canada</h1>
+    <div class="main">
+        <div class="col1">
+            <div>Province or Territory:</div> 
+            <select id="province">
+                <option selected="selected">Canada</option>
+                <option>Ontario</option>
+                <option>Quebec</option>
+                <option>British Columbia</option>
+                <option>Alberta</option>
+                <option>Manitoba</option>
+                <option>Saskatchewan</option>
+                <option>Nova Scotia</option>
+                <option>New Brunswick</option>
+                <option>Prince Edward Island</option>
+                <option>Newfoundland and Labrador</option>
+                <option>Yukon</option>
+                <option>Nunavut</option>
+                <option>Northwest Territories</option>
+            </select>
+            <div id="date">
+                <div id="title">Date: </div>
+                <div class="date"></div>
+                <div class="date_arrow">
+                    <a id="prev" href="#"> &lt; </a>
+                    <a id="next" href="#"> &gt; </a>
+                </div>
+            </div>
+            <div class="confirmedCases">
+                <div class="item1">Confirmed Cases:</div>
+                <div class="item2">Daily</div>
+                <div class="item3">Total</div>
+                <div class="item4" id="daily_cases"></div>
+                <div class="item5" id="total_cases"></div>
+                <div class="item6">Source: https://health-infobase.canada.ca</div>
+            </div>
+            &nbsp;
+        </div>
+        &nbsp;
+        <div id="chartblock">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+ /* 
+ External CSS for covidCases.html
+ AUTHOR: Diwen Zhang
+ EMAIL:  zhangdiw@sheridancollege.ca
+ CREATED: 2021-06-30
+ UPDATED: 2021-07-2
+ */
+
+
+ @media screen and (max-width: 600px) 
+ and (orientation : portrait){
+    #chartblock {
+    position:relative;
+    margin:10px;
+    min-width: 300px;
+    max-width: 580px;
+    min-height:300px;
+    border:1px solid #eee;
+    overflow:hidden; 
+} 
+ }
+
+ @media screen and (min-width: 600px) 
+ and (orientation : landscape){
+    #chartblock {
+        position:relative;
+        width:50%;
+        min-height:300px;
+        border:1px solid #eee;
+        overflow:hidden; 
+    }
+    
+ }
+
+ h1{
+    text-align: center;
+ }
+
+ .main{
+    display:flex;
+    gap:10px;
+    flex-wrap: wrap;
+ }
+
+ .main>.col1 {
+    flex: 1 0 200px;
+    min-height: 300px;
+    text-align: left;
+    font-size:1.3em;
+ }
+
+ .main>.col2 {
+    flex: 1 0 300px;
+    min-height: 300px;
+    text-align: left;
+ }
+
+ .main>.col1 #province{
+    font-size: 1.5em;
+    width:100%
+ }
+
+ #date{
+    line-height:2.5em; 
+    display:flex;
+ }
+
+ #date .date{
+    font-size: 1.5em;
+ }
+
+ #date>#title{
+   line-height: 2.8em;
+ }
+
+ .date_arrow>a{
+    text-decoration: none;
+    padding-left:20px;
+    color:#000;
+    font-size: calc(1em + 0.3vw);
+}
+
+.confirmedCases{
+    display:grid;
+    gap:5px;
+    height:2vw;    
+    grid-template-areas:
+        "title title"
+        "lSubtitle rSubtitle"
+        "left right"
+        "footer footer";
+    grid-template-rows: 2fr 4fr 4fr 1fr;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+
+.confirmedCases>.item1 {
+    grid-area: title;
+    text-align: left;
+}
+
+.confirmedCases>.item2 {
+    grid-area: lSubtitle;
+    font-size: 1.5em;
+}
+
+.confirmedCases>.item3 {
+    grid-area: rSubtitle;
+    font-size: 1.5em;
+}
+
+.confirmedCases>.item4 {
+    grid-area: left;
+    color:rgb(23, 143, 223);
+    font-size: 1.7em;
+}
+
+.confirmedCases>.item5 {
+    grid-area: right;
+    font-size: 1.7em;
+    color:red;
+}
+
+.confirmedCases>.item6 {
+    grid-area: footer;
+    font-style: italic;
+    color:rgb(109, 105, 105);
+    text-align: left;
+}
+
+
+
+
+
